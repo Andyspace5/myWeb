@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="thtml">
+	<head>
+		<meta charset="utf-8" />
+		<title>地市中心-主页</title>
+		<meta content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" name="viewport"> 
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/page.css">
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="js/page.js" ></script>
+	</head>
+	<body class="body_f6 ct_body">
+		<section class="cities_index">
+			<div class="cities_title">
+				<h1>长沙市公积金中心</h1>
+				<a href="#"><p>根据国务院《住房公积金管理条例》、省人民政府办公厅《关于长沙市住房公积金管理机构调整工作实施方案的批复》（湘政函〔2002〕173号）文件精神，长沙市住房公积金管理中心更名为长沙住房公积金管理中心，为市人民政府直属的负责全市住房公积金管理的正县级事业单位。</p></a>
+				<span class="next_arrow"><img src="img/list_arrow.png" /> </span>
+			</div>
+			<div class="cities_content">
+				<ul class="address_list">
+					<li><h4>芙蓉区管理部</h4><p>东二环一段1061-1号锦泰东环国际2楼</p></li>
+					<li><h4>芙蓉区管理部</h4><p>东二环一段1061-1号锦泰东环国际2楼</p></li>
+					<li><h4>芙蓉区管理部</h4><p>东二环一段1061-1号锦泰东环国际2楼</p></li>
+				</ul>
+				<div class="content_main">
+					<ul class="content_change">
+						<li class="now">政策法规</li>
+						<li>业务指南</li>
+						<li>信息公开</li>
+					</ul>
+					<ul class="content_ct">
+						<li><a href="#">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="#">关于印发《长沙住房公积金提取管理办法》的通知《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="#">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li><li><a href="">关于印发《长沙住房公积金提取管理办法》的通知《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<li><a href="">关于印发《长沙住房公积金提取管理办法》的通知</a></li>
+						<div class="tips">上拉加载更多...</div>
+					</ul>
+					
+				</div>
+			</div>
+			
+			<a href="#" class="yw"><img src="img/yw.png" /><p>业务办理</p></a>
+		</section>
+		<script>
+//			滚动
+			var x = $(".cities_index .cities_title p").offset();
+			var chei = x.top+$(".cities_index .cities_title p").height()+10;
+			$(".cities_index .cities_content").css("top",chei+"px");
+			$(window).scroll(function(e){
+				var wScotop = $(window).scrollTop();
+				var mainHeight = $(".cities_content .content_main").offset().top+1;
+				if (wScotop>=mainHeight) {
+					$(".cities_content .content_main .content_change").addClass("fix");
+					$(".cities_content .content_main .content_ct").addClass("fix");
+				}else{
+					$(".cities_content .content_main .content_change").removeClass("fix");
+					
+					$(".cities_content .content_main .content_ct").removeClass("fix");
+				}
+			})
+			$(document)[0].addEventListener('touchmove', function(){
+				$(".cities_index .yw").addClass("op");
+			})
+			$(document)[0].addEventListener('touchend', function(){
+				$(".cities_index .yw").removeClass("op");
+			})
+		</script>
+	</body>
+</html>
